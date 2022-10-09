@@ -45,7 +45,6 @@ h1 {
 	justify-content: flex-end;
 }
 .nav-link {
-	font-size: 1.1rem;
 	color: #000;
 	font-weight: 500;
 	padding-right: 20px !important;
@@ -73,16 +72,23 @@ h1 {
 }
 /* Drop Down Menu */
 ul.Dropdown.list-unstyled.position-absolute {
-    width: 200px;
+    width: 250px;
+    padding: 20px;
     text-align: left;
     box-shadow: 1px 5px 15px 1px #0e0e0e4d;
     border-radius: 5px;
-    top: 101%;
+    top: 115%;
     background: #fff;
 }
 ul.Dropdown li a i {
     position: absolute;
     right: 20px;
+}
+ul.Dropdown li a{
+    transition: 0.3s all;
+}
+ul.Dropdown li a:hover{
+    letter-spacing: 1px;
 }
 ul.Dropdown-2.list-unstyled {
     position: absolute;
@@ -96,17 +102,15 @@ ul.Dropdown-2.list-unstyled {
 ul.navbar-nav li:hover> a{
     color:red !important;
 }
-.nav-item ul{
+.nav-item ul {
     opacity: 0;
     visibility: hidden;
-    transition: 0.5s all linear;
-    transform: scaleY(0);
-    transform-origin: top;
+    transition: 0.5s all ease-in-out;
 }
 .nav-item:hover ul.Dropdown{
-    transform: scaleY(1);
     opacity: 1;
     visibility: visible;
+    top: 101%;
 }
 .nav-item ul.Dropdown li:hover ul.Dropdown-2{
     transform: scaleY(1);
@@ -752,4 +756,70 @@ nav.tab-button {
 .blog-item:hover .read-more.btn{
     letter-spacing: 0.5px;
     color:#e73c3e;
+}
+
+
+/* Footter Css */
+footer{
+    background: #111111;
+}
+
+.social li {
+    margin: 0 8px;
+    color: #fff;
+}
+.social li:first-child{
+    margin-left:0;
+}
+.social li i{
+    color: #fff;
+    transition: 0.3s all;
+}
+.social li:hover i{
+   color: #e73c3e;
+}
+
+.single-footer-widget h3{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 22px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333535;
+}
+.single-footer-widget .quick-links{
+    list-style: none;
+    padding-left: 0;
+}
+.single-footer-widget .quick-links li{
+    margin-bottom: 18px;
+}
+.single-footer-widget .quick-links a{
+    color:#fff;
+}
+
+.single-footer-widget a, .single-footer-widget span {
+    color: #fff;
+    display: block;
+}
+.single-footer-widget a:hover{
+    color: #e73c3e;
+}
+.single-footer-widget .info-contact {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 22px;
+}
+.single-footer-widget .info-contact i {
+    position: absolute;
+    left: 0;
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: bold;
+    top: 5px;
+}
+.copy-right{
+        border-top: 1px solid #292929;
+}
+.copy-right p{
+       color: #606060;
 }
